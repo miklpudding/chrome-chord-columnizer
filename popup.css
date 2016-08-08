@@ -1,0 +1,12 @@
+
+body {
+  min-width: 100px;
+}
+ul {
+  font-size: 0;
+  text-indent: 0;
+  padding-left: 0;
+}
+ul li {
+  display: inline-block;
+}

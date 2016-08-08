@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "chord-columnizer",
+  "version": "0.1.0",
+  "description": "columnize chord",
+  "icons": {
+    "48": "icon48.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+
+  "page_action": {
+    "default_icon": {
+      "48": "icon48.png"
+    },
+    "default_title": "Columnizer",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+
+  "content_scripts": [{
+    "matches": [
+      "*://ja.chordwiki.org/*",
+      "*://chordsketch.com/*",
+      "*://gakufu.gakki.me/*",
+      "*://www.ufret.jp/*"
+    ],
+    "js": [
+      "columnize.js",
+      "content.js"
+    ],
+    "run_at": "document_idle"
+  }]
+}
