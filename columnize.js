@@ -44,6 +44,7 @@ function trimSpaces()
       with (document.querySelector(selector).style) {
         margin = "0px";
         padding = "10px";
+        textAlign = 'left';
       }
     }
   });
