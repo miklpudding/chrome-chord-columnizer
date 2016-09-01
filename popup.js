@@ -7,6 +7,13 @@
     });
   };
 
+  var _forEach = function(xs, f) {
+    if (xs.forEach)
+      xs.forEach(f)
+    else
+      [].forEach.call(xs, f)
+  }
+
   // Ads checkbox
   var adsCheckBox = document.querySelector('#ads-visible');
   if (adsCheckBox) {
@@ -26,7 +33,7 @@
   }
 
   // Column buttons
-  document.querySelectorAll("button").forEach(function(button){
+  _forEach(document.querySelectorAll("button"), function(button){
     button.addEventListener('click', function(){
       sendMessage({
         action: 'columns',
