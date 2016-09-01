@@ -9,6 +9,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     break;
   case 'trim-spaces':
     trimSpaces();
+    break;
   }
 });
 
