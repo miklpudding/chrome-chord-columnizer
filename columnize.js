@@ -78,8 +78,8 @@ function columnize(count)
     with (content.style) {
       width = '100%';
       height = '100%';
-      columns = (count == '1') ? '' : count; // column count 1 for reset
-      columnGap = '10px';
+      MozColumnCount = columnCount = (count == '1') ? '' : count; // column count 1 for reset
+      MozColumnGap = columnGap = '10px';
     }
   }
 }
