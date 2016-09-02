@@ -6,7 +6,7 @@ var ContentSelectors = {
 };
 
 /**
- *
+ * 要素を最上位に移動
  */
 function moveToTop_(body, el) {
   // move to top
@@ -22,9 +22,9 @@ function moveToTop_(body, el) {
 
 
 /**
- * 広告表示の切り替え
+ * 余分な要素を排除
  */
-function showAds(display)
+function trimAds()
 {
   var content = getContent(location.hostname);
   if (content) {
@@ -81,5 +81,8 @@ function columnize(count)
       MozColumnCount = columnCount = (count == '1') ? '' : count; // column count 1 for reset
       MozColumnGap = columnGap = '10px';
     }
+
+    trimAds();
+    trimSpaces();
   }
 }
