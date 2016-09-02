@@ -14,13 +14,11 @@
       [].forEach.call(xs, f)
   }
 
-  // Ads checkbox
-  var adsCheckBox = document.querySelector('#ads-visible');
+  var adsCheckBox = document.querySelector('#trim-ads');
   if (adsCheckBox) {
     adsCheckBox.addEventListener('change', function(){
       sendMessage({
-        action: 'show-ads',
-        display: adsCheckBox.checked ? 'block' : 'none'
+        action: 'trim-ads',
       }, function(response){});
     });
   }
