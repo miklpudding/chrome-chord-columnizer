@@ -4,8 +4,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
   case 'columns':
     columnize(request.column);
     break;
-  case 'show-ads':
-    showAds(request.display);
+  case 'trim-ads':
+    trimAds();
     break;
   case 'trim-spaces':
     trimSpaces();
