@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="chord-columnizer : コード譜を段組み表示するブラウザ拡張">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>chord-columnizer</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/miklpudding/chrome-chord-columnizer">View on GitHub</a>
+
+          <h1 id="project_title">chord-columnizer</h1>
+          <h2 id="project_tagline">コード譜を段組み表示するブラウザ拡張</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/miklpudding/chrome-chord-columnizer/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/miklpudding/chrome-chord-columnizer/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="利用方法" class="anchor" href="#%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>利用方法</h2>
+
+<ul>
+<li>chordwiki/ufret/gakkime/chordsketch のいずれかのサイトを開くと、アイコンがクリック可能になります</li>
+<li>アイコンをクリックしてポップアップメニューからカラム数を選択</li>
+<li>スクロールが発生しないようにカラム数を調整</li>
+<li>転調・ダイアグラムの非表示等は予め選択しておいてください</li>
+<li>やり直す場合は、ブラウザのリロード(再読み込み)で</li>
+</ul>
+
+<h2>
+<a id="既知の問題" class="anchor" href="#%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>既知の問題</h2>
+
+<ul>
+<li>[ ] 歌詞とコードが別の段に表示される
+  -&gt; フォントやウィンドウ・サイズ変更で調整可能？</li>
+</ul>
+
+<h2>
+<a id="制限事項" class="anchor" href="#%E5%88%B6%E9%99%90%E4%BA%8B%E9%A0%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>制限事項</h2>
+
+<ul>
+<li>[ ] ストア以外からの拡張のインストールの為、
+  ブラウザ起動時に警告が出る(Chrome)
+  -&gt; ストアへ登録申請</li>
+</ul>
+
+<h2>
+<a id="インストール方法" class="anchor" href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>インストール方法</h2>
+
+<h3>
+<a id="chrome" class="anchor" href="#chrome" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chrome</h3>
+
+<ol>
+<li>ZIPファイルを展開</li>
+<li>chrome://extensions/ を開きデベロッパーモードを有効にする</li>
+<li>パッケージ化されていない拡張機能を読み込むで展開した場所を指定</li>
+</ol>
+
+<h3>
+<a id="firefox" class="anchor" href="#firefox" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FireFox</h3>
+
+<ul>
+<li>XPIファイルをブラウザへドラッグ、もしくはダウンロード時にインストールを選択</li>
+</ul>
+
+<h3>
+<a id="opera-他chromium系ブラウザ" class="anchor" href="#opera-%E4%BB%96chromium%E7%B3%BB%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Opera (他、Chromium系ブラウザ)</h3>
+
+<ul>
+<li>CRXファイルをブラウザへドラッグ</li>
+</ul>
+
+<h3>
+<a id="microsoft-edge-未検証" class="anchor" href="#microsoft-edge-%E6%9C%AA%E6%A4%9C%E8%A8%BC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Microsoft Edge (未検証)</h3>
+
+<ul>
+<li>Windows 10 Anniversary Update 適応済の場合
+
+<ul>
+<li>ゼロからはじめる Microsoft Edge 用の拡張の作り方
+<a href="https://blogs.msdn.microsoft.com/osamum/2016/07/05/how-to-make-extension-for-msedge/">https://blogs.msdn.microsoft.com/osamum/2016/07/05/how-to-make-extension-for-msedge/</a>
+</li>
+<li>MS、Chromeの拡張機能をEdgeで動作させるツールキット「Microsoft Edge Extension Toolkit」公開
+<a href="http://internet.watch.impress.co.jp/docs/news/1014363.html">http://internet.watch.impress.co.jp/docs/news/1014363.html</a>
+</li>
+</ul>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">chord-columnizer maintained by <a href="https://github.com/miklpudding">miklpudding</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
