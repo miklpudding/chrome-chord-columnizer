@@ -1,7 +1,7 @@
 
 ## 利用方法
 
-- chordwiki/ufret/gakkime/chordsketch のいずれかのサイトを開くと、アイコンがクリック可能になります
+- chordwiki/ufret/gakkime/chordsketch のいずれかのサイトを開き
 - アイコンをクリックしてポップアップメニューからカラム数を選択
 - スクロールが発生しないようにカラム数を調整
 - 転調・ダイアグラムの非表示等は予め選択しておいてください
@@ -27,7 +27,7 @@
 2. chrome://extensions/ を開きデベロッパーモードを有効にする
 3. パッケージ化されていない拡張機能を読み込むで展開した場所を指定
 
-### FireFox
+### FireFox (48.0以降)
 
 - XPIファイルをブラウザへドラッグ、もしくはダウンロード時にインストールを選択
 
@@ -42,4 +42,3 @@
     https://blogs.msdn.microsoft.com/osamum/2016/07/05/how-to-make-extension-for-msedge/
   - MS、Chromeの拡張機能をEdgeで動作させるツールキット「Microsoft Edge Extension Toolkit」公開
     http://internet.watch.impress.co.jp/docs/news/1014363.html
-
