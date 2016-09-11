@@ -64,13 +64,19 @@ function getContent(hostname)
  */
 function breakInside()
 {
-  var x = getContent();
+  var _forEach = function(xs, f) {
+    if (xs.forEach)
+      xs.forEach(f)
+    else
+      [].forEach.call(xs, f)
+  };
+
   switch (location.hostname) {
   case "ja.chordwiki.org":
-    x.style.lineHeight = "";
-    x.querySelectorAll("p").forEach(function(e){
+    document.querySelector("div.main").style.lineHeight = "";
+    _forEach(document.querySelectorAll("div.main p"), function(e){
       with (e.style) {
-        backgroundColor = "#fefeff";
+        backgroundColor = "#eeeeff";
         breakInside = 'avoid-column';
         paddingTop = '1em';
         margin = "0px";
