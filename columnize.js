@@ -59,6 +59,27 @@ function getContent(hostname)
   return document.querySelector(ContentSelectors[hostname]);
 }
 
+/**
+ * 折り返し位置の抑制
+ */
+function breakInside()
+{
+  var x = getContent();
+  switch (location.hostname) {
+  case "ja.chordwiki.org":
+    x.style.lineHeight = "";
+    x.querySelectorAll("p").forEach(function(e){
+      with (e.style) {
+        backgroundColor = "#fefeff";
+        breakInside = 'avoid-column';
+        paddingTop = '1em';
+        margin = "0px";
+      }
+    });
+    break;
+  }
+}
+
 
 /**
  * 段組み設定
@@ -84,5 +105,6 @@ function columnize(count)
 
     trimAds();
     trimSpaces();
+    breakInside();
   }
 }
