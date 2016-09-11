@@ -60,27 +60,77 @@ function getContent(hostname)
 }
 
 /**
- * 折り返し位置の抑制
+ * コードと歌詞が別れないように、折り返し位置を抑制
+ *
+ * - chordwiki/ufret では、ポジションが マイナス値なので、コードが前の行に重なっていた。
+ *   line-heightで行間を開けてたところを、padding-topで行の高さを確保するように変更。
+ * - chordsketch は対策必要なし。
+ * - gakkime では、コードと歌詞が別の行なので、共通の親要素を持つように纏める。
  */
 function breakInside()
 {
+  // fallback for FF NodeList.forEach
   var _forEach = function(xs, f) {
     if (xs.forEach)
       xs.forEach(f)
     else
       [].forEach.call(xs, f)
   };
+  var bgColor = "#eeeeff";
 
   switch (location.hostname) {
   case "ja.chordwiki.org":
     document.querySelector("div.main").style.lineHeight = "";
     _forEach(document.querySelectorAll("div.main p"), function(e){
       with (e.style) {
-        backgroundColor = "#eeeeff";
+        backgroundColor = bgColor;
         breakInside = 'avoid-column';
         paddingTop = '1em';
         margin = "0px";
       }
+    });
+    break;
+  case "www.ufret.jp":
+    _forEach(document.querySelectorAll("div#blyodnijb p.atfolhyds"), function(e){
+      with (e.style) {
+        backgroundColor = bgColor;
+        breakInside = 'avoid-column';
+        paddingTop = '20px';
+        margin = "0px";
+      }
+    });
+    break;
+  case "chordsketch.com":
+    /* no need */
+    break;
+  case "gakufu.gakki.me":
+    document.querySelector("#divStayTopLeft").style.display = 'none';
+
+    var x = getContent(location.hostname);
+    if (x.paired) // ２回以上実行してしまわないようにするフラグ
+      return;
+    x.setAttribute('paired', true);
+
+    var xs = x.querySelectorAll("p, br");
+    var xs_length = xs.length;
+    var children = []
+    for (var i=0; i<xs_length; i+=2) {
+      var div = document.createElement("div");
+      with (div.style) {
+        backgroundColor = bgColor;
+        breakInside = 'avoid-column';
+        padding = "2px";
+      }
+      div.appendChild(xs[i]);
+      div.appendChild(xs[i+1]);
+      children.push(div)
+    }
+
+    while (x.firstChild) {
+      x.removeChild(x.firstChild);
+    }
+    children.forEach(function(e){
+      x.appendChild(e);
     });
     break;
   }
