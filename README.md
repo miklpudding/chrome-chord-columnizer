@@ -1,5 +1,5 @@
 
-!(スクリーンショット)[https://dl.dropboxusercontent.com/s/yhn33oa42r7i7lf/chord-columnizer-ss.png]
+![スクリーンショット](https://dl.dropboxusercontent.com/s/yhn33oa42r7i7lf/chord-columnizer-ss.png)
 
 ## 利用方法
 
