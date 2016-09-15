@@ -1,11 +1,13 @@
+## Screenshot
 
 ![スクリーンショット](https://dl.dropboxusercontent.com/s/yhn33oa42r7i7lf/chord-columnizer-ss.png)
 
 ## 利用方法
 
-- chordwiki/ufret/gakkime/chordsketch のいずれかのサイトを開き
-- アイコンをクリックしてポップアップメニューからカラム数を選択
-- スクロールが発生しないようにカラム数を調整
+1. chordwiki/ufret/gakkime/chordsketch のいずれかのサイトを開き
+2. アイコンをクリックしてポップアップメニューからカラム数を選択
+3. スクロールが発生しないようにカラム数を調整
+
 - 転調・ダイアグラムの非表示等は予め選択しておいてください
 - やり直す場合は、ブラウザのリロード(再読み込み)で。
 - ブラウザのウィンドウはなるべく横長で大きめに表示し、フォントを小さくすることで画面に収まりやすくできます。
@@ -23,13 +25,11 @@
 
 ### FireFox (48.0以降)
 
-- [Mozilla Addons からインストール](https://addons.mozilla.org/ja/firefox/addon/chord-columnizer/)
+- [Mozilla アドオンからインストール](https://addons.mozilla.org/ja/firefox/addon/chord-columnizer/)
 
 ### Opera
 
-- Operaアドオンでの公開は審査待ち
-- 開発版は、CRXファイルをブラウザへドラッグで仮インストール可
-    - [Release page](https://github.com/miklpudding/chrome-chord-columnizer/releases) より、最新の crx ファイルをダウンロードして下さい。
+- [Opera アドオンからインストール](https://addons.opera.com/ja/extensions/details/817b7a57fa3a9755497ed99973c82a7404bdb310/?display=en)
 
 ### Microsoft Edge (未検証)
 
